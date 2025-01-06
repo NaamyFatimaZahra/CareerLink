@@ -1,13 +1,12 @@
 <?php
-
-require_once __DIR__ .("/vendor/autoload.php");
+require_once("C:/xampp/htdocs/CareerLink/vendor/autoload.php");
 use App\Controllers\Auth\AuthController;
+
 
 
 
 if(isset($_POST["submit"]))
 {
-
     if(empty($_POST["email"]) && empty($_POST["password"]))
     {
         echo "email or password is empty";

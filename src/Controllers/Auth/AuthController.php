@@ -7,8 +7,6 @@ use App\Models\UserModel;
 use PDO;
 
 class AuthController{
-
-   
     public function login($email, $password){
         $userModel = new UserModel();
         $user =  $userModel->findUserByEmailAndPassword($email, $password);

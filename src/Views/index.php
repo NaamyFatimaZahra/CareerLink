@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../vendor/autoload.php");
+require_once("C:/xampp/htdocs/CareerLink/vendor/autoload.php");
 use App\Config\Database;
 
 

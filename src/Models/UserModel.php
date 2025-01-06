@@ -15,8 +15,8 @@ class UserModel{
     }
 
     public function findUserByEmailAndPassword($email, $password){
-        $query = "SELECT users.id , users.email , users.password , role.id as role_id , role.title as `role`
-        FROM users join role on role.id = users.role_id where users.email = :email and users.password = :password";        
+        $query = "SELECT users.id , users.email , users.password , users.role_id, roles.name as `role`
+        FROM users join roles on roles.id = users.role_id where users.email = :email and users.password = :password";        
    
         $stmt = $this->conn->prepare($query); 
         $stmt->bindParam(":email", $email);
